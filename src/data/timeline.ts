@@ -10,7 +10,8 @@ export const timelineData: TimelineItemProps[] = [
       'Built and launched the current corporate website',
       'Developed key web applications including Customer Trade Portal, Sales Backoffice, Payment Backoffice, Intranet, and Customer Service Backoffice',
       'Collaborated with cross-functional teams to deliver business-driven applications'
-    ]
+    ],
+    isLeft: false
   },
   {
     type: 'experience',
@@ -21,7 +22,8 @@ export const timelineData: TimelineItemProps[] = [
       'Developed a mobile fashion app using React Native with AI body scanning features',
       'Implemented a bidding system for fashion designers to bid on user-submitted styles',
       'Enhanced user experience by allowing users to choose designers based on ratings, pricing, and delivery timeline'
-    ]
+    ],
+    isLeft: true
   },
   {
     type: 'education',
@@ -30,6 +32,7 @@ export const timelineData: TimelineItemProps[] = [
     period: '2016 - 2021',
     description: [
       'Final project: Optimizing production using Linear Programming Simplex Method'
-    ]
+    ],
+    isLeft: false
   }
 ];

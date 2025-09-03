@@ -1,17 +1,17 @@
-import ctmImg from '../assets/ctm-2.png';
+// import ctmImg from '../assets/ctm-2.png';
 import pboImg from '../assets/pbo.png';
 import salesImg from '../assets/sales.png';
 import sbcwebImg from '../assets/sbc-web.png';
 import delocareImg from '../assets/delocare.png';
-// import hrImg from '../assets/hr-app.png';
 import salesVid from '../assets/sales-app.mp4';
 import pboVid from '../assets/pbo-app.mp4';
-// import hrVid from '../assets/hr-app.mp4';
 import sbcVid from '../assets/sbc-app.mp4';
-import ctmVid from '../assets/ctm-app.mp4';
+// import ctmVid from '../assets/ctm-app.mp4';
 import delocareVid from '../assets/delocare-app.mp4';
 import finpalImg from '../assets/finpal.png';
 import finpalVid from '../assets/finpal.mp4';
+import insightxImg from '../assets/insightx-1.png';
+import insightxVid from '../assets/insightx.mp4';
 const projectDetails = [
   {
     title: 'FinPal – Personal Finance Dashboard',
@@ -33,21 +33,33 @@ const projectDetails = [
     isPublic: true
   },
   {
-    title: 'Customer Trade Portal',
-    description: 'A scalable web platform for managing trade operations for distributors, enhancing customer buying engagement, and automating sales workflows.',
-    overview: `Developed a comprehensive web application for managing trade operations, facilitating seamless customer engagement, and automating core sales processes. The portal serves as a central hub for trade managers, enabling them to track orders, manage customer accounts, and generate detailed reports on sales activities.`,
+    title: 'InsightX — Marketing Management Platform',
+    description: 'A full-stack web platform for managing marketing activities, agent operations, and customer engagement with real-time collaboration features.',
+    overview: `Developed a comprehensive full-stack marketing management platform that enables teams to create, track, and manage marketing activities, forms, and agent operations. The application features real-time collaboration, automated workflows, and comprehensive analytics for marketing campaigns and customer engagement.`,
     keyFeatures: [
-      'Order management with filtering and sorting options',
-      'Customer account management with detailed views and editing capabilities',
-      'Automated processes for reduced manual errors',
-      'Comprehensive reporting and data export functionality'
+      'Marketing activity management with real-time collaboration and discussion threads',
+      'Dynamic form builder with drag-and-drop interface and custom field types',
+      'Agent management system with regional assignments and activity tracking',
+      'Real-time notifications and chat functionality using Socket.IO',
+      'Comprehensive dashboard with analytics and progress tracking',
+      'Google OAuth integration for secure authentication',
+      'Responsive design with modern UI components and dark/light theme support'
     ],
-    impact: 'Improved trade operations efficiency by 40% and reduced manual errors through automated processes.',
-    techStack: ['React', 'TypeScript', 'Redux Toolkit'],
-    image: ctmImg,
-    videoUrl: ctmVid,
-    repoUrl: '',
-    isPublic: false
+    impact: 'Streamlined marketing operations with centralized activity management, reduced coordination time by 60%, and improved team collaboration through real-time features.',
+    techStack: [
+      'React 19',
+      'Vite',
+      'Tailwind CSS',
+      'Node.js',
+      'MongoDB',
+      'Socket.IO'
+    ],
+    image: insightxImg,
+    videoUrl: insightxVid,
+    repoUrl: 'https://github.com/VictoryOmowumi/insightx-webb',
+    demoUrl: 'https://insightx-ten.vercel.app/',
+    backendUrl: 'https://insightx-ya2k.onrender.com/api-docs/',
+    isPublic: true
   },
   {
     title: 'Payment Backoffice',

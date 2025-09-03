@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Calendar, Building2, GraduationCap } from 'lucide-react';
 
-interface TimelineItemProps {
+export interface TimelineItemProps {
   title: string;
   organization: string;
   period: string;

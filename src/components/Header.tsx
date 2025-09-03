@@ -41,7 +41,7 @@ const Header: React.FC = () => {
           </Link>
           
           <h2 className="hidden md:flex items-center space-x-8 text-2xl">
-            {['About', 'Projects', 'Skills', 'Certifications', 'Contact'].map((item) => (
+            {['About', 'Projects', 'Skills', 'Certifications', 'Contact', ].map((item) => (
               <Link
                 key={item}
                 to={item.toLowerCase()}

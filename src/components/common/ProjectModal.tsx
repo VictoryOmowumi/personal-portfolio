@@ -16,6 +16,7 @@ interface ProjectModalProps {
     moreDetails?: string;
     demoUrl?: string;
     repoUrl?: string;
+    backendUrl?: string;
   };
 }
 
@@ -30,7 +31,7 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
       onClose={onClose}
       className="flex justify-center items-center min-h-screen py-8"
     >
-      <div className="p-6 bg-white dark:bg-gray-900 h-full overflow-auto rounded-lg w-full md:w-4/5 mx-auto md:mt-20 relative">
+      <div className="p-6 bg-white dark:bg-gray-900 overflow-y-auto max-h-[90vh] rounded-lg w-full md:w-4/5 mx-auto">
         {/* Close Button */}
         <button
           onClick={onClose}
@@ -133,6 +134,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             </a>
           </div>
         )}
+        {/* Backend URL */}
+        {project.backendUrl && (
+          <div className="mb-6">
+            <h4 className="font-semibold text-lg mb-2">Backend URL</h4>
+            <a href={project.backendUrl} target="_blank" rel="noopener noreferrer" className="text-indigo-600 dark:text-indigo-300 hover:underline">
+              {project.backendUrl}
+        
+              </a>
+            </div>
+          )}
 
         {/* Repository URL */}
         {project.repoUrl && (

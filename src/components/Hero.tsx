@@ -32,9 +32,9 @@ const socialLinks = [
 ];
 
 const Hero: React.FC = () => {
-  const heroRef = useRef(null);
-  const buttonsRef = useRef(null);
-  const socialLinksRef = useRef(null);
+  const heroRef = useRef<HTMLDivElement>(null);
+  const buttonsRef = useRef<HTMLDivElement>(null);
+  const socialLinksRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Animate the hero section elements on load
@@ -45,38 +45,42 @@ const Hero: React.FC = () => {
     );
 
     // Animate buttons with a staggered effect
-    gsap.fromTo(
-      buttonsRef.current.children,
-      { opacity: 0, y: 20 },
-      {
-        opacity: 1,
-        y: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out",
-        scrollTrigger: {
-          trigger: buttonsRef.current,
-          start: "top 80%",
-        },
-      }
-    );
+    if (buttonsRef.current) {
+      gsap.fromTo(
+        buttonsRef.current.children,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: buttonsRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }
 
     // Animate social links on scroll
-    gsap.fromTo(
-      socialLinksRef.current.children,
-      { opacity: 0, scale: 0.8 },
-      {
-        opacity: 1,
-        scale: 1,
-        duration: 1,
-        stagger: 0.1,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-          trigger: socialLinksRef.current,
-          start: "top 90%",
-        },
-      }
-    );
+    if (socialLinksRef.current) {
+      gsap.fromTo(
+        socialLinksRef.current.children,
+        { opacity: 0, scale: 0.8 },
+        {
+          opacity: 1,
+          scale: 1,
+          duration: 1,
+          stagger: 0.1,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: socialLinksRef.current,
+            start: "top 90%",
+          },
+        }
+      );
+    }
   }, []);
   gsap.to(".background-layer", {
     xPercent: 10,
@@ -113,11 +117,13 @@ const Hero: React.FC = () => {
           <h2 className="text-xl sm:text-2xl md:text-3xl text-primary-green mb-6">
             <TypeAnimation
               sequence={[
-                "Senior Frontend Developer",
+                "Frontend & Full-Stack Developer",
                 2000,
-                "React.js Expert",
+                "React / Next.js / Node.js",
                 2000,
-                "UI/UX Enthusiast",
+                "UI/UX-Driven Product Builder",
+                2000,
+                "AI-Driven Product Builder", 
                 2000,
               ]}
               wrapper="span"
