@@ -7,29 +7,30 @@ import gridBg from '../assets/grid-bg.svg';
 
 const skillCategories: SkillCategory[] = [
   {
-    title: 'Frontend',
+    title: 'Frontend Architecture',
     skills: [
-      { name: 'React.js', icon: '⚛️', proficiency: 90 },
+      { name: 'React/Next.js', icon: '⚛️', proficiency: 90 },
       { name: 'TypeScript', icon: '📘', proficiency: 85 },
-      { name: 'Redux', icon: '🔄', proficiency: 80 },
-      { name: 'Tailwind CSS', icon: '🎨', proficiency: 75 },
+      { name: 'Redux Toolkit', icon: '🔄', proficiency: 90 },
+      { name: 'Tailwind CSS', icon: '🎨', proficiency: 80 },
     ],
   },
   {
-    title: 'Backend',
+    title: 'Backend & Systems',
     skills: [
-      { name: 'Node.js', icon: '🟢', proficiency: 85 },
-      { name: 'Express.js', icon: '🚂', proficiency: 80 },
+      { name: 'Node/Express', icon: '🟢', proficiency: 85 },
+      { name: 'C# .NET', icon: '🔷', proficiency: 80 },
+      { name: 'SQL/MongoDB', icon: '🗄️', proficiency: 85 },
       { name: 'GraphQL', icon: '📊', proficiency: 70 },
-      { name: 'MongoDB', icon: '🍃', proficiency: 75 },
     ],
   },
   {
-    title: 'Tools',
+    title: 'Design & DevOps',
     skills: [
-      { name: 'Git', icon: '📦', proficiency: 90 },
-      { name: 'Postman', icon: '📬', proficiency: 80 },
-      { name: 'CI/CD', icon: '🔄', proficiency: 85 },
+      { name: 'System Design', icon: '🏛️', proficiency: 85 },
+      { name: 'Docker/CI/CD', icon: '🔄', proficiency: 85 },
+      { name: 'Observability', icon: '📈', proficiency: 80 }, 
+      { name: 'Process Mapping', icon: '🗺️', proficiency: 90 },
     ],
   },
 ];

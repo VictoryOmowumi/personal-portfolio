@@ -1,6 +1,6 @@
 import React from "react";
 import { Modal } from "@mui/material";
-import { X } from "lucide-react";
+import { Laptop2, X } from "lucide-react";
 
 interface ProjectModalProps {
   open: boolean;
@@ -17,6 +17,7 @@ interface ProjectModalProps {
     demoUrl?: string;
     repoUrl?: string;
     backendUrl?: string;
+    systemDesign?: string;
   };
 }
 
@@ -50,6 +51,16 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <h4 className="font-semibold text-lg mb-2">Overview</h4>
           <p className="text-gray-700 dark:text-gray-300">{project.overview}</p>
         </div>
+        {project.systemDesign && (
+          <div className="mb-6 p-4 bg-indigo-50 dark:bg-indigo-900/30 border-l-4 border-indigo-500 rounded-r-lg">
+            <h4 className="font-bold text-indigo-700 dark:text-indigo-300 text-lg mb-2 flex items-center gap-2">
+              <Laptop2 size={20} /> System Architecture & Logic
+            </h4>
+            <p className="text-gray-800 dark:text-gray-200 italic">
+              {project.systemDesign}
+            </p>
+          </div>
+        )}
 
         {/* Video Section */}
         {project.videoUrl && (
@@ -119,8 +130,8 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
           <p className="text-gray-700 dark:text-gray-300">{project.impact}</p>
         </div>
 
-          
-          {/* Demo URL */}
+
+        {/* Demo URL */}
         {project.demoUrl && (
           <div className="mb-6">
             <h4 className="font-semibold text-lg mb-2">Demo URL</h4>
@@ -140,10 +151,10 @@ const ProjectModal: React.FC<ProjectModalProps> = ({
             <h4 className="font-semibold text-lg mb-2">Backend URL</h4>
             <a href={project.backendUrl} target="_blank" rel="noopener noreferrer" className="text-indigo-600 dark:text-indigo-300 hover:underline">
               {project.backendUrl}
-        
-              </a>
-            </div>
-          )}
+
+            </a>
+          </div>
+        )}
 
         {/* Repository URL */}
         {project.repoUrl && (

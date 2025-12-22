@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Code2, Brain, Rocket, User, NotebookPen, Workflow, ShieldCheck, BarChart3 } from "lucide-react";
+import { Code2, Brain, Rocket, User, NotebookPen, Workflow, ShieldCheck, BarChart3, Bolt } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import meImg from "../assets/me-1.jpg";
@@ -32,10 +32,10 @@ const strengths = [
 ];
 
 const howIWork = [
-  { icon: NotebookPen, title: "Discover", blurb: "Stakeholder interviews, process maps, success metrics" },
-  { icon: Workflow, title: "Design", blurb: "UX flows, wireframes, architecture & data contracts" },
-  { icon: ShieldCheck, title: "Build", blurb: "React/Next.js, Node APIs, auth, CI-ready delivery" },
-  { icon: BarChart3, title: "Measure", blurb: "Dashboards, SLAs, iteration on real outcomes" },
+  { icon: NotebookPen, title: "Discover", blurb: "Stakeholder workshops, process mapping, and identifying core business constraints." },
+  { icon: Workflow, title: "Architect", blurb: "System blueprints, data contracts, and selecting optimal tech stacks for scale." },
+  { icon: ShieldCheck, title: "Engineer", blurb: "Building resilient .NET/Node APIs and accessible React UIs with CI/CD rigor." },
+  { icon: Bolt, title: "Scale", blurb: "Monitoring SLAs, automated reconciliation, and iterating based on data integrity." },
 ];
 
 const About: React.FC = () => {
@@ -86,7 +86,7 @@ const About: React.FC = () => {
     if (!el) return;
     gsap.to(el, { scale: 1.04, duration: 0.25, ease: "power1.out" });
   };
-  
+
   const handleMouseLeave = (index: number) => {
     const el = cardsRef.current?.children[index] as HTMLElement | undefined;
     if (!el) return;
@@ -170,13 +170,16 @@ const About: React.FC = () => {
               <span className="px-3 py-1 bg-indigo dark:bg-primary-green/10 text-primary-green rounded-full text-sm font-medium">
                 Product Design
               </span>
+              <span className="px-3 py-1 bg-indigo dark:bg-primary-green/10 text-primary-green rounded-full text-sm font-medium">
+                System Design
+              </span>
             </div>
           </div>
         </div>
       </div>
 
       {/* How I Work Section */}
-      <div 
+      <div
         id="business-solutions"
         className="relative bg-gray-900 rounded-2xl p-8 md:p-12 overflow-hidden"
         style={{ backgroundImage: `url(${gridBg})`, backgroundSize: 'cover' }}
@@ -189,7 +192,7 @@ const About: React.FC = () => {
           <p className="text-gray-300 text-center mb-10 max-w-2xl mx-auto">
             A systematic approach to turning business challenges into scalable solutions
           </p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {howIWork.map(({ icon: Icon, title, blurb }) => (
               <div key={title} className="group">
