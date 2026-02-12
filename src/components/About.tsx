@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import { Code2, Brain, Rocket, User, NotebookPen, Workflow, ShieldCheck, BarChart3, Bolt } from "lucide-react";
+import { Code2, Brain, Rocket, User, NotebookPen, Workflow, ShieldCheck, Bolt } from "lucide-react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import meImg from "../assets/me-1.jpg";
