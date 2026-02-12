@@ -66,6 +66,7 @@ const Projects: React.FC = () => {
             <div
               key={index}
               ref={(el) => (cardsRef.current[index] = el!)}
+              onClick={() => setActiveProject(index)}
               className="relative bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow hover:shadow-lg transition-shadow transform hover:scale-105 duration-300"
             >
               <div className="relative h-56 overflow-hidden">
@@ -99,12 +100,12 @@ const Projects: React.FC = () => {
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.techStack.map((tech, techIndex) => (
+                  {project.techStack.slice(0, 5).map((tech, techIndex) => (
                     <span
                       key={techIndex}
                       className="px-3 py-1 bg-[#2e808633] border border-[#2d808666] text-sm rounded-full text-indigo-500 dark:text-indigo-200"
                     >
-                      {tech}
+                      {tech} {techIndex < 4 ? '...' : ''}
                     </span>
                   ))}
                 </div>

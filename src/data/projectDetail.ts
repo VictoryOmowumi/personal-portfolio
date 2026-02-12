@@ -10,26 +10,61 @@ import finpalImg from '../assets/finpal.png';
 import finpalVid from '../assets/finpal.mp4';
 import insightxImg from '../assets/insightx-1.png';
 import insightxVid from '../assets/insightx.mp4';
+import truckcoImg from '../assets/trucko.png';
+import truckcoVid from '../assets/truckco.mp4';
 
 const projectDetails = [
+  // {
+  //   title: 'Payment Backoffice (Financial Observability)',
+  //   description: 'A mission-critical internal tool for real-time monitoring of ₦17B+ monthly transactions and multi-bank reconciliation.',
+  //   overview: `Architected a high-fidelity financial observability platform to monitor and reconcile disparate transaction streams across 6 major banking providers. The system serves as the definitive 'Source of Truth' for internal audit teams, ensuring high-fidelity monitoring of significant monthly volumes with automated exception handling.`,
+  //   keyFeatures: [
+  //     'Federated Search Engine: Engineered a unified query strategy to retrieve data from local SQL records and external bank APIs in parallel.',
+  //     'Automated Reconciliation: Designed background processes to synchronize virtual accounts with banking partners, reducing operational downtime by 30%.',
+  //     'Granular RBAC: Implemented strict Role-Based Access Control and audit logging for secure data handling and financial compliance.',
+  //     'Real-time Transaction Replaying: Enabled instant visibility and state updates for pending or disputed payments.'
+  //   ],
+  //   impact: 'Enabled 30% faster transaction reconciliation and significantly reduced manual cycle-times by 40%. The platform currently supports over ₦17 billion in monthly transactions, playing a key role in Seven-Up Bottling Company\'s financial operations.',
+  //   systemDesign: 'Utilized Industrial Mathematics optimization models to determine the optimal API polling frequency, balancing data freshness with server resource costs.',
+  //   techStack: ['React', 'TypeScript', 'Redux Toolkit', 'C# .NET', 'SQL Server'],
+  //   image: pboImg,
+  //   videoUrl: pboVid,
+  //   repoUrl: '',
+  //   isPublic: false
+  // },
   {
-    title: 'Payment Backoffice (Financial Observability)',
-    description: 'A mission-critical internal tool for real-time monitoring of ₦17B+ monthly transactions and multi-bank reconciliation.',
-    overview: `Architected a high-fidelity financial observability platform to monitor and reconcile disparate transaction streams across 6 major banking providers. The system serves as the definitive 'Source of Truth' for internal audit teams, ensuring high-fidelity monitoring of significant monthly volumes with automated exception handling.`,
+    title: 'Truck&Co — Logistics Operations Dashboard',
+    description: 'A modern logistics operations dashboard for dispatch coordination, fleet oversight, and real-time order tracking.',
+    overview: `Built a full-featured logistics operations dashboard that centralizes dispatch workflows, fleet visibility, and order management into a single, intuitive control surface. Truck&Co combines map-based context, operational insights, and streamlined management tools to support dispatchers and operations teams in fast-paced logistics environments.`,
     keyFeatures: [
-      'Federated Search Engine: Engineered a unified query strategy to retrieve data from local SQL records and external bank APIs in parallel.',
-      'Automated Reconciliation: Designed background processes to synchronize virtual accounts with banking partners, reducing operational downtime by 30%.',
-      'Granular RBAC: Implemented strict Role-Based Access Control and audit logging for secure data handling and financial compliance.',
-      'Real-time Transaction Replaying: Enabled instant visibility and state updates for pending or disputed payments.'
+      'Dispatch Console with Live Map Context: Integrated Leaflet and React-Leaflet to provide real-time geographic visibility of fleet activity directly within dispatch workflows.',
+      'Fleet & Order Management: Implemented dedicated management views for drivers, vehicles, orders, and users to support end-to-end operational oversight.',
+      'Authentication & Account Flows: Built secure authentication flows including email verification, password reset, and session management.',
+      'Operational UI System: Designed a responsive, theme-aware interface using modern component primitives for long-term usability and consistency.',
+      'Scalable Navigation Structure: Leveraged Next.js App Router to structure the application around core operational domains.'
     ],
-    impact: 'Enabled 30% faster transaction reconciliation and significantly reduced manual cycle-times by 40%. The platform currently supports over ₦17 billion in monthly transactions, playing a key role in Seven-Up Bottling Company\'s financial operations.',
-    systemDesign: 'Utilized Industrial Mathematics optimization models to determine the optimal API polling frequency, balancing data freshness with server resource costs.',
-    techStack: ['React', 'TypeScript', 'Redux Toolkit', 'C# .NET', 'SQL Server'],
-    image: pboImg,
-    videoUrl: pboVid,
-    repoUrl: '',
-    isPublic: false
-  },
+    impact: 'Improved operational clarity by unifying dispatch, fleet, and order data into a single dashboard, reducing context switching and enabling faster decision-making for logistics teams.',
+    systemDesign: 'Designed a scalable Next.js application using the App Router with a clean separation of concerns between UI, authentication, and data layers. Backend persistence is handled via MongoDB with Mongoose, while transactional workflows leverage event-based email notifications.',
+    techStack: [
+      'Next.js 16 (App Router)',
+      'React 19',
+      'TypeScript',
+      'Tailwind CSS',
+      'Radix UI',
+      'Phosphor Icons',
+      'NextAuth',
+      'MongoDB',
+      'Mongoose',
+      'Leaflet',
+      'React-Leaflet',
+      'Resend'
+    ],
+    image: truckcoImg,
+    videoUrl: truckcoVid,
+    repoUrl: 'https://github.com/VictoryOmowumi/logistics-fleet-app',
+    demoUrl: 'https://logistics-fleet-app.vercel.app/auth/login',
+    isPublic: true
+  },  
   {
     title: 'InsightX — Marketing Management Platform',
     description: 'A real-time collaborative full-stack platform for managing distributed marketing activities and agent operations.',

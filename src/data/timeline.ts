@@ -5,13 +5,25 @@ export const timelineData: TimelineItemProps[] = [
     type: 'experience',
     title: 'Frontend Developer',
     organization: 'Seven-Up Bottling Company (PepsiCo)',
-    period: '2022 - Present',
+    period: '2023 - Present',
     description: [
       'Built and launched the current corporate website',
       'Developed key web applications including Customer Trade Portal, Sales Backoffice, Payment Backoffice, Intranet, and Customer Service Backoffice',
       'Collaborated with cross-functional teams to deliver business-driven applications'
     ],
     isLeft: false
+  },
+  {
+    type: 'experience',
+    title: 'Frontend Engineer',
+    organization: 'Clouddley',
+    period: '2025 - Present',
+    description: [
+      'Developed and maintained the Clouddley website using Next.js, TypeScript, and Tailwind CSS',
+      'Implemented responsive design and accessibility features to ensure a seamless user experience',
+      'Collaborated with the design team to implement new features and improve the user interface'
+    ],
+    isLeft: true
   },
   {
     type: 'experience',
